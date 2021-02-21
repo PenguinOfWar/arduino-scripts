@@ -24,11 +24,11 @@ int blueValue;
 // main loop
 void loop()
 {
-#define delayTime 1 // fading time between colors
+#define delayTime 10 // fading time between colors
 
-redValue = 0; // choose a value between 1 and 255 to change the color.
+redValue = 255; // choose a value between 1 and 255 to change the color.
 greenValue = 0;
-blueValue = 255;
+blueValue = 0;
 
 // this is unnecessary as we've either turned on RED in SETUP
 // or in the previous loop ... regardless, this turns RED off
@@ -47,9 +47,9 @@ analogWrite(GREEN, greenValue);
 delay(delayTime);
 }
 
-redValue = 255;
-greenValue = 0;
-blueValue = 255;
+redValue = 0;
+greenValue = 255;
+blueValue = 0;
 
 for(int i = 0; i < 255; i += 1) // fades out green bring blue full when i=255
 {
